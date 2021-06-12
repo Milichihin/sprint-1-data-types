@@ -1,6 +1,6 @@
-import "./styles.css";
-import "./data-types.js";
-import "./arrays.js";
+// import "./styles.css";
+// import "./data-types.js";
+// import "./arrays.js";
 // import "./exceptions.js";
 // import "./functions.js";
 
