@@ -103,7 +103,7 @@ function checkAdult(age = null) {
 // const loginList4 = longestLogin(loginList2);
 // const newArrFact = processArray(arrFact, factorial);
 
-//==================================
+//=====================================
 
 // console.log(users);
 // console.log(numbers);
@@ -112,4 +112,4 @@ function checkAdult(age = null) {
 // console.log(loginList4);
 // console.log(newArrFact);
 // console.log(modifyArray(users));
-checkAdult();
+// checkAdult();
