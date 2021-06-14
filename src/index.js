@@ -18,15 +18,13 @@ SPRINT 1. Data types. Arrays. Functions. Exceptions.
 
 //==============================================================
 
-
 // const nu = 'b'+'a'++'a'+'a';
 // console.log(typeof nu);
 
 //==============================================================
 //Quiz2 of Sprint1
 
-
-const users = ['андрей', 'ирина', 'игорь', 'петр'];
+const users = ["андрей", "ирина", "игорь", "петр"];
 const numbers = [12, 6, 22, 0, -8];
 const mix1 = [12, "User01", 22, true, -8];
 const mix2 = ["Index", 6, null, 15];
@@ -34,25 +32,25 @@ const loginList1 = ["serg22", "tester_2", "Prokopenko", "guest"];
 const loginList2 = ["user1", "user2", "333", "user4", "aa"];
 const arrFact = [0, 1, 2, 3, 4, 5];
 
-//============= 
+//=============
 
 function modifyArray(array) {
-  array.splice(0, 1, 'Start');
-  array.splice(-1, 1, 'End');
+  array.splice(0, 1, "Start");
+  array.splice(-1, 1, "End");
   return array;
 }
 
-//============= 
+//=============
 
 function combineArray(arr1, arr2) {
-  return arr1.concat(arr2).filter(item => typeof (item) === "number");
+  return arr1.concat(arr2).filter((item) => typeof item === "number");
 }
 
-//============= 
+//=============
 
 function longestLogin(loginList) {
   let login = loginList.reduce((prev, curr) => {
-    return (prev.length > curr.length) ? prev : curr;
+    return prev.length > curr.length ? prev : curr;
   });
   return login;
 }
@@ -60,7 +58,7 @@ function longestLogin(loginList) {
 //============= factorial ==========
 
 function factorial(n) {
-  return (n != 1 && n != 0) ? n * factorial(n - 1) : 1;
+  return n != 1 && n != 0 ? n * factorial(n - 1) : 1;
 }
 
 function processArray(arr, factorial) {
@@ -70,31 +68,35 @@ function processArray(arr, factorial) {
 
 //============== Age ===============
 
-
 function checkAdult(age = null) {
   try {
-    if (Number.isInteger(age) && Math.sign(age) == 1 && age >= 18 && !isNaN(age) && age !== null) {
-      return console.log('Access allowed');
+    if (
+      Number.isInteger(age) &&
+      Math.sign(age) === 1 &&
+      age >= 18 &&
+      !isNaN(age) &&
+      age !== null
+    ) {
+      return console.log("Access allowed");
     } else if (isNaN(age)) {
-      throw new Error('Please, enter number');
+      throw new Error("Please, enter number");
     } else if (age === null) {
-      throw new Error('Please, enter your age');
+      throw new Error("Please, enter your age");
     } else if (Math.sign(age) !== 1) {
-      throw new Error('Please, enter positive number');
+      throw new Error("Please, enter positive number");
     } else if (Number.isInteger(age) === false) {
-      throw new Error('Please, enter Integer number');
+      throw new Error("Please, enter Integer number");
     } else if (age < 18) {
-      throw new Error('Access denied - you are too young!');
+      throw new Error("Access denied - you are too young!");
     }
   } catch (exception) {
-    console.log(exception.name + ' ' + exception.message);
+    console.log(exception.name + " " + exception.message);
   } finally {
-    console.log('Age verification complete');
+    console.log("Age verification complete");
   }
-};
+}
 
 //==================================
-
 
 // modifyArray(users);
 // modifyArray(numbers);
